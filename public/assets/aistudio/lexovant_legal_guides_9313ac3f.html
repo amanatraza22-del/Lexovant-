@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Legal Guides &amp; Knowledge Base - Lexovant</title>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim from Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#fbf9fb",
+            "on-primary-fixed-variant": "#36485e",
+            "inverse-primary": "#b5c8e3",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dbd9db",
+            "border-subtle": "#E2E8F0",
+            "on-primary-container": "#7587a0",
+            "on-background": "#1b1c1d",
+            "surface-bg": "#F8FAFC",
+            "surface-tint": "#4e6077",
+            "surface-variant": "#e4e2e4",
+            "on-surface-variant": "#44474c",
+            "secondary": "#006b5f",
+            "inverse-on-surface": "#f2f0f2",
+            "outline-variant": "#c4c6cd",
+            "secondary-fixed-dim": "#4fdbc8",
+            "inverse-surface": "#303032",
+            "on-tertiary-fixed-variant": "#5d4123",
+            "surface-container-high": "#e9e7e9",
+            "surface": "#fbf9fb",
+            "on-primary": "#ffffff",
+            "on-surface": "#1b1c1d",
+            "on-tertiary-container": "#a27f5b",
+            "primary-fixed-dim": "#b5c8e3",
+            "on-tertiary-fixed": "#2b1700",
+            "surface-bright": "#fbf9fb",
+            "surface-card": "#FFFFFF",
+            "surface-container": "#efedef",
+            "tertiary": "#090300",
+            "error": "#ba1a1a",
+            "primary-fixed": "#d1e4ff",
+            "charcoal-dark": "#1E1E1E",
+            "outline": "#74777d",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#0b1f33",
+            "on-secondary-fixed-variant": "#005048",
+            "surface-container-low": "#f5f3f5",
+            "secondary-container": "#6df5e1",
+            "on-secondary-fixed": "#00201c",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#081d30",
+            "on-secondary-container": "#006f64",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#e7bf97",
+            "surface-container-highest": "#e4e2e4",
+            "tertiary-container": "#2e1901",
+            "secondary-fixed": "#71f8e4",
+            "tertiary-fixed": "#ffdcbb",
+            "on-error-container": "#93000a",
+            "primary": "#00050e",
+            "accent-gold": "#F4B860",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Manrope"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Custom subtle touch and scrollbar styles */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 1rem);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-bg text-on-surface font-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col">
+<!-- ================= TOP APP BAR (Shared Component Anchor) ================= -->
+<!-- Note: Shell Border Ban applied - using shadow-sm tonal shift instead of borders -->
+<header class="docked full-width top-0 sticky z-40 bg-surface-card shadow-sm">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<button aria-label="Menu" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors duration-150 active:scale-95 text-primary" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary lowercase">
+        lexovant
+      </span>
+<button aria-label="Search" class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container transition-colors duration-150 active:scale-95 text-primary" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<!-- ================= MAIN CONTENT CANVAS ================= -->
+<main class="flex-1 w-full max-w-md mx-auto px-4 pt-4 pb-28 flex flex-col gap-6">
+<!-- Screen Intro / Header Banner -->
+<section class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="h-2 w-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase font-semibold">Legal Research &amp; Knowledge</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-primary tracking-tight">Legal Guides</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Plain-language Indian law explainers, case simplifications, and practical drafting guides.</p>
+</section>
+<!-- Search Bar with Integrated Quick Filters -->
+<section class="flex flex-col gap-2">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-xl" data-icon="search">search</span>
+<input class="w-full h-12 pl-11 pr-10 bg-surface-card rounded-lg border border-border-subtle font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/15 transition-all shadow-sm" placeholder="Search clauses, rights, Supreme Court cases..." type="search"/>
+<button aria-label="Filter options" class="absolute right-2.5 top-1/2 -translate-y-1/2 p-1.5 text-on-surface-variant hover:text-primary rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="tune">tune</span>
+</button>
+</div>
+<!-- Quick Search Prompts -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Suggested:</span>
+<button class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">Section 17A</button>
+<button class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">Jamabandi</button>
+<button class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">Zero FIR</button>
+<button class="bg-surface-container px-2.5 py-1 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-primary whitespace-nowrap transition-colors">NDA Checklist</button>
+</div>
+</section>
+<!-- Category Filtering Horizontal Carousel -->
+<section class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold tracking-wider uppercase">Filter by Domain</span>
+<span class="font-label-sm text-label-sm text-secondary cursor-pointer font-medium">Clear filter</span>
+</div>
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 pb-1">
+<!-- Active Pill -->
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm whitespace-nowrap flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="check">check</span>
+          All Guides
+        </button>
+<!-- Filter Pills -->
+<button class="px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container active:scale-95 transition-all">
+          Property Law
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container active:scale-95 transition-all">
+          Supreme Court
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container active:scale-95 transition-all">
+          Land Records
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container active:scale-95 transition-all">
+          Intellectual Property
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container active:scale-95 transition-all">
+          Criminal / BNSS 2024
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-card border border-border-subtle text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap hover:bg-surface-container active:scale-95 transition-all">
+          Consumer Rights
+        </button>
+</div>
+</section>
+<!-- FEATURED HERO GUIDE CARD (Oceanic Brand Glow Card) -->
+<section>
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary-container via-[#0B2B3D] to-primary p-5 text-on-primary shadow-lg border border-[#0B2B3D]">
+<!-- Background Ambient Glow & Geometric Accent -->
+<div class="absolute -right-12 -top-12 w-44 h-44 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 right-0 w-36 h-36 bg-accent-gold/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-accent-gold/20 text-accent-gold font-label-sm text-label-sm tracking-wide uppercase font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="star" data-weight="fill">star</span>
+              Featured Property Guide
+            </span>
+<button aria-label="Bookmark article" class="text-on-primary/70 hover:text-on-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<!-- Bilingual Headline -->
+<h2 class="font-headline-md text-headline-md font-bold leading-tight text-on-primary pt-1">
+            Registry Ho Gayi, Phir Bhi Zameen Par Kabza Nahi Mila? Ab Kya Karein?
+          </h2>
+<p class="font-body-sm text-body-sm text-on-primary/80 line-clamp-2">
+            Registered sale deed ke baad bhi zameen ka possession nahi mila? Understand practical legal steps, civil remedies, and key property-record checks under Indian revenue law.
+          </p>
+<div class="pt-2 flex items-center justify-between border-t border-white/10 text-on-primary/70 font-label-sm text-label-sm">
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                6 min read
+              </span>
+<span>•</span>
+<span>Oct 23, 2026</span>
+</div>
+<a class="inline-flex items-center gap-1 text-secondary-fixed hover:text-white font-label-md text-label-md transition-colors" href="#read-more">
+              Read Guide
+              <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION: Curated Articles Bento / Structured List -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between pt-2">
+<h2 class="font-headline-sm text-headline-sm text-primary tracking-tight">Recent Explainers &amp; Briefs</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Showing 6 articles</span>
+</div>
+<!-- Article Card 1: Supreme Court Criminal / BNSS -->
+<article class="bg-surface-card rounded-lg p-4 border border-border-subtle shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm">
+            Supreme Court • Criminal
+          </span>
+<button aria-label="Bookmark" class="text-outline hover:text-secondary p-1 transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary cursor-pointer transition-colors">
+          Supreme Court on Bribe Allegations: When Is Prior Approval Under Section 17A Required?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          In Tejaram v. State of Rajasthan, the Supreme Court explained why Section 17A prior approval did not apply to an alleged bribe demand and clarified public servant protections.
+        </p>
+<div class="pt-2 mt-1 border-t border-border-subtle/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+              5 min read
+            </span>
+<span>•</span>
+<span>Oct 23, 2026</span>
+</div>
+<span class="text-secondary font-label-sm font-semibold flex items-center gap-0.5">
+            Read Case <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Article Card 2: Bihar Land Jamabandi (Bilingual Title) -->
+<article class="bg-surface-card rounded-lg p-4 border border-border-subtle shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-[#F4B860]/20 text-[#92400E] font-label-sm text-label-sm">
+            Land Records • Checklist
+          </span>
+<button aria-label="Bookmarked" class="text-secondary p-1 transition-colors">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="bookmark" data-weight="fill">bookmark</span>
+</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary cursor-pointer transition-colors">
+          Bihar Mein Zameen Kharidne Se Pehle Jamabandi, Mutation Aur Registry Kaise Check Karein?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Bihar mein zameen kharidne se pehle Jamabandi, mutation aur registry ka difference samjhein. Practical checklist to cross-verify land revenue portal records.
+        </p>
+<div class="pt-2 mt-1 border-t border-border-subtle/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+              7 min read
+            </span>
+<span>•</span>
+<span>Oct 22, 2026</span>
+</div>
+<span class="text-secondary font-label-sm font-semibold flex items-center gap-0.5">
+            View Checklist <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Article Card 3: 7 Legal Essentials Property Checklist -->
+<article class="bg-surface-card rounded-lg p-4 border border-border-subtle shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm">
+            Property Law • Real Estate
+          </span>
+<button aria-label="Bookmark" class="text-outline hover:text-secondary p-1 transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary cursor-pointer transition-colors">
+          Buying Property? Check These 7 Legal Essentials First
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Planning to buy a plot, flat or house? Use this practical seven-point property document checklist, covering title deeds, encumbrance certificates, and mutation proofs.
+        </p>
+<div class="pt-2 mt-1 border-t border-border-subtle/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+              8 min read
+            </span>
+<span>•</span>
+<span>Oct 22, 2026</span>
+</div>
+<span class="text-secondary font-label-sm font-semibold flex items-center gap-0.5">
+            Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Article Card 4: Intellectual Property / Copyright -->
+<article class="bg-surface-card rounded-lg p-4 border border-border-subtle shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm">
+            Intellectual Property • Creators
+          </span>
+<button aria-label="Bookmark" class="text-outline hover:text-secondary p-1 transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary cursor-pointer transition-colors">
+          You Can't Copyright an Idea. Here's What You Can Protect Instead
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Everyone tells creators to "copyright their idea" before pitching. Indian copyright law doesn't work that way. Learn how NDAs and expression protections work.
+        </p>
+<div class="pt-2 mt-1 border-t border-border-subtle/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+              4 min read
+            </span>
+<span>•</span>
+<span>Oct 21, 2026</span>
+</div>
+<span class="text-secondary font-label-sm font-semibold flex items-center gap-0.5">
+            Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Article Card 5: Police Procedure BNSS Zero FIR -->
+<article class="bg-surface-card rounded-lg p-4 border border-border-subtle shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm">
+            BNSS 2024 • Police Procedure
+          </span>
+<button aria-label="Bookmark" class="text-outline hover:text-secondary p-1 transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary cursor-pointer transition-colors">
+          How to File an FIR in India (Zero FIR and e-FIR): Step-by-Step Guide Under BNSS
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Police saying it is not their jurisdiction? Learn how to file a Zero FIR online or at any police station across India under the newly enacted Bharatiya Nagarik Suraksha Sanhita.
+        </p>
+<div class="pt-2 mt-1 border-t border-border-subtle/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+              6 min read
+            </span>
+<span>•</span>
+<span>Oct 16, 2026</span>
+</div>
+<span class="text-secondary font-label-sm font-semibold flex items-center gap-0.5">
+            Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</article>
+<!-- Article Card 6: Consumer Online Filing -->
+<article class="bg-surface-card rounded-lg p-4 border border-border-subtle shadow-sm flex flex-col gap-2.5 transition-all hover:shadow-md">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm">
+            Consumer Rights • E-Daakhil
+          </span>
+<button aria-label="Bookmark" class="text-outline hover:text-secondary p-1 transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary hover:text-secondary cursor-pointer transition-colors">
+          How to File a Consumer Complaint Online in India (Step-by-Step Guide)
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+          Learn how to file a consumer complaint through the E-Daakhil portal: jurisdiction tiers, limitation periods, court fee calculations, and evidence submission rules.
+        </p>
+<div class="pt-2 mt-1 border-t border-border-subtle/60 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="timer">timer</span>
+              5 min read
+            </span>
+<span>•</span>
+<span>Oct 16, 2026</span>
+</div>
+<span class="text-secondary font-label-sm font-semibold flex items-center gap-0.5">
+            Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</article>
+</section>
+<!-- Infinite Scroll / Load More Affordance -->
+<section class="flex flex-col items-center gap-3 pt-2">
+<button class="w-full h-12 flex items-center justify-center gap-2 rounded-lg bg-surface-card border border-primary text-primary font-label-md text-label-md hover:bg-surface-container active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base" data-icon="sync">sync</span>
+        Load More Guides (Page 1 of 4)
+      </button>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+<span>Auto-fetching next 6 articles as you scroll</span>
+</div>
+</section>
+<!-- Interactive Newsletter Card: Plain-language updates -->
+<section class="bg-surface-container-high rounded-xl p-5 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+        Get New Guides by Email
+      </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Plain-language guides on contracts, rights, and freelancing in India. No spam, unsubscribe anytime.
+      </p>
+<form class="flex flex-col gap-2" onsubmit="event.preventDefault()">
+<input class="h-11 px-3.5 bg-surface-card border border-border-subtle rounded-lg font-body-sm text-on-surface focus:outline-none focus:border-secondary shadow-sm" placeholder="Type your email address…" type="email"/>
+<button class="h-11 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:bg-primary-container active:scale-95 transition-all" type="submit">
+          Subscribe to Updates
+        </button>
+</form>
+</section>
+<!-- ================= FOOTER (Shared Component Anchor) ================= -->
+<footer class="w-full px-4 pt-10 pb-6 flex flex-col gap-6 bg-surface-container-lowest text-primary">
+<div class="flex flex-col gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">lexovant</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Skills | Rights | Ideas. Practical research and legal drafting guides by Amanat Raza, Advocate.
+        </p>
+</div>
+<!-- Footer Quick Links Grid -->
+<div class="grid grid-cols-2 gap-2 text-body-sm">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#services">Contract Services</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#portfolio">Portfolio</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#cases">Case Simplified</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#contact">Contact</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#privacy">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#cookie">Cookie Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#disclaimer">Disclaimer</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#terms">Terms of Use</a>
+</div>
+<!-- Shared Component Copyright Text -->
+<div class="pt-4 border-t border-border-subtle font-body-sm text-body-sm text-on-surface-variant">
+        © 2026 Lexovant. For general information only, not legal advice.
+      </div>
+</footer>
+</main>
+<!-- ================= BOTTOM NAVIGATION BAR (Shared Component Anchor) ================= -->
+<!-- Note: Active Destination is strictly 'Guides' (label_texts[1]), Shell Border Ban strictly adhered -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-1.5 pb-safe bg-surface-card shadow-[0_-2px_10px_rgba(11,31,51,0.06)] md:hidden">
+<!-- Tab 1: Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 flex-1 active:scale-95 transition-transform duration-150 hover:text-primary" href="#home">
+<span class="material-symbols-outlined text-2xl" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<!-- Tab 2: Guides (ACTIVE - matches current page intent) -->
+<a class="flex flex-col items-center justify-center text-secondary font-semibold py-1 flex-1 active:scale-95 transition-transform duration-150" href="#guides">
+<span class="material-symbols-outlined text-2xl" data-icon="menu_book" data-weight="fill" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-label-sm text-label-sm mt-0.5">Guides</span>
+</a>
+<!-- Tab 3: Contracts (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 flex-1 active:scale-95 transition-transform duration-150 hover:text-primary" href="#contracts">
+<span class="material-symbols-outlined text-2xl" data-icon="gavel">gavel</span>
+<span class="font-label-sm text-label-sm mt-0.5">Contracts</span>
+</a>
+<!-- Tab 4: Book (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 flex-1 active:scale-95 transition-transform duration-150 hover:text-primary" href="#book">
+<span class="material-symbols-outlined text-2xl" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-0.5">Book</span>
+</a>
+</nav>
+<!-- Interactive script for toggling bookmarks and filters -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Micro-interaction for bookmark icons
+      const bookmarkButtons = document.querySelectorAll('button[aria-label="Bookmark"], button[aria-label="Bookmarked"]');
+      bookmarkButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const icon = btn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            const isFilled = icon.style.fontVariationSettings && icon.style.fontVariationSettings.includes("'FILL' 1");
+            if (isFilled) {
+              icon.style.fontVariationSettings = "'FILL' 0";
+              icon.classList.remove('text-secondary');
+              icon.classList.add('text-outline');
+            } else {
+              icon.style.fontVariationSettings = "'FILL' 1";
+              icon.classList.remove('text-outline');
+              icon.classList.add('text-secondary');
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body></html>

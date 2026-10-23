@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-lex-navy: #0b1f33;
+  --color-lex-deep: #00050e;
+  --color-lex-teal: #006b5f;
+  --color-lex-teal-light: #14b8a6;
+  --color-lex-teal-surface: #6df5e1;
+  --color-lex-gold: #f4b860;
+  --color-lex-bg: #f8fafc;
+  --color-lex-card: #ffffff;
+  --color-lex-border: #e2e8f0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-lex-bg);
+  color: #1b1c1d;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headline);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbars for data tables and carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}

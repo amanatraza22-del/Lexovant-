@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lexovant — Contract Drafting &amp; Review Services</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#fbf9fb",
+            "on-primary-fixed-variant": "#36485e",
+            "inverse-primary": "#b5c8e3",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dbd9db",
+            "border-subtle": "#E2E8F0",
+            "on-primary-container": "#7587a0",
+            "on-background": "#1b1c1d",
+            "surface-bg": "#F8FAFC",
+            "surface-tint": "#4e6077",
+            "surface-variant": "#e4e2e4",
+            "on-surface-variant": "#44474c",
+            "secondary": "#006b5f",
+            "inverse-on-surface": "#f2f0f2",
+            "outline-variant": "#c4c6cd",
+            "secondary-fixed-dim": "#4fdbc8",
+            "inverse-surface": "#303032",
+            "on-tertiary-fixed-variant": "#5d4123",
+            "surface-container-high": "#e9e7e9",
+            "surface": "#fbf9fb",
+            "on-primary": "#ffffff",
+            "on-surface": "#1b1c1d",
+            "on-tertiary-container": "#a27f5b",
+            "primary-fixed-dim": "#b5c8e3",
+            "on-tertiary-fixed": "#2b1700",
+            "surface-bright": "#fbf9fb",
+            "surface-card": "#FFFFFF",
+            "surface-container": "#efedef",
+            "tertiary": "#090300",
+            "error": "#ba1a1a",
+            "primary-fixed": "#d1e4ff",
+            "charcoal-dark": "#1E1E1E",
+            "outline": "#74777d",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#0b1f33",
+            "on-secondary-fixed-variant": "#005048",
+            "surface-container-low": "#f5f3f5",
+            "secondary-container": "#6df5e1",
+            "on-secondary-fixed": "#00201c",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#081d30",
+            "on-secondary-container": "#006f64",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed-dim": "#e7bf97",
+            "surface-container-highest": "#e4e2e4",
+            "tertiary-container": "#2e1901",
+            "secondary-fixed": "#71f8e4",
+            "tertiary-fixed": "#ffdcbb",
+            "on-error-container": "#93000a",
+            "primary": "#00050e",
+            "accent-gold": "#F4B860",
+            "on-error": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "space-sm": "0.5rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "headline-sm": ["Manrope"],
+            "headline-lg": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "body-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-md": ["Manrope"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 1rem);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-bg text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-secondary selection:text-on-secondary">
+<!-- TOP APP BAR (Shared Component) -->
+<header class="docked full-width top-0 sticky z-40 bg-surface-card shadow-sm border-b border-border-subtle">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<button aria-label="Open menu" class="w-10 h-10 flex items-center justify-center text-primary rounded-lg hover:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
+<div class="flex items-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-primary lowercase">lexovant</span>
+</div>
+<button aria-label="Search site" class="w-10 h-10 flex items-center justify-center text-primary rounded-lg hover:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTENT -->
+<main class="flex-1 w-full max-w-3xl mx-auto px-4 py-6 space-y-8 pb-32">
+<!-- CREDENTIALS HERO BANNER -->
+<section class="bg-primary-container text-on-primary rounded-xl p-space-lg shadow-sm relative overflow-hidden">
+<!-- Glow & Subtle Geometry -->
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-secondary opacity-20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 space-y-3">
+<div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-white/10 text-accent-gold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          ADVOCATE-LED DRAFTING
+        </div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-bold tracking-tight text-on-primary">
+          Precise contracts built for Indian ventures &amp; founders.
+        </h1>
+<p class="font-body-md text-body-md text-surface-variant max-w-xl">
+          Direct legal drafting and forensic clause review by <strong class="text-white font-semibold">Amanat Raza</strong>, Advocate. Specializing in legal research, cross-border terms, IP protection, and high-stakes commercial agreements under Indian law.
+        </p>
+<!-- Fast Credential Badges -->
+<div class="grid grid-cols-3 gap-2 pt-2 border-t border-white/10">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-white">48h</span>
+<span class="font-label-sm text-label-sm text-surface-variant">Standard Turnaround</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-white">100%</span>
+<span class="font-label-sm text-label-sm text-surface-variant">Confidential Review</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-white">Direct</span>
+<span class="font-label-sm text-label-sm text-surface-variant">Counsel Access</span>
+</div>
+</div>
+</div>
+</section>
+<!-- DIRECT ADVOCATE CONTACT STRIP -->
+<section class="bg-surface-card border border-border-subtle rounded-lg p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Need urgent legal turnaround?</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Direct consultation with Advocate Amanat Raza available today.</p>
+</div>
+<div class="flex items-center gap-2.5">
+<a class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-dim transition-colors duration-150 active:scale-95" href="tel:+919199114077">
+<span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+            +91 91991 14077
+          </a>
+<a class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container text-primary hover:bg-surface-dim transition-colors duration-150 active:scale-95" href="mailto:amanatraza22@gmail.com" title="Email Amanat Raza">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</a>
+</div>
+</div>
+</section>
+<!-- SERVICES CATALOG -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Practice Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Drafting &amp; Review Catalog</h2>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-container px-2 py-1 rounded">5 Offerings</span>
+</div>
+<!-- Services Grid (Structured Bento Cards) -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Service 1: NDA Drafting & Review -->
+<div class="bg-surface-card border border-border-subtle rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<span class="inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary/10 text-secondary">
+                IP &amp; CONFIDENTIALITY
+              </span>
+<h3 class="font-headline-md text-headline-md text-primary">NDA Drafting &amp; Review</h3>
+</div>
+<span class="inline-flex items-center text-label-sm font-label-sm text-on-surface-variant bg-surface-bg px-2 py-1 rounded border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary">schedule</span> 24–48 Hours
+            </span>
+</div>
+<p class="font-body-md text-body-md text-charcoal-dark mt-2.5">
+            Custom unilateral or mutual non-disclosure agreements. Protect proprietary algorithms, customer registries, investor pitches, and confidential startup know-how with enforceable jurisdiction under Indian jurisdiction.
+          </p>
+<div class="mt-3.5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Scope: Full draft + 1 revision round</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold hover:underline" href="#intake">
+              Request Review <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2: MoU Drafting & Strategic Terms -->
+<div class="bg-surface-card border border-border-subtle rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<span class="inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary/10 text-secondary">
+                PARTNERSHIPS
+              </span>
+<h3 class="font-headline-md text-headline-md text-primary">MoU Drafting &amp; Strategic Terms</h3>
+</div>
+<span class="inline-flex items-center text-label-sm font-label-sm text-on-surface-variant bg-surface-bg px-2 py-1 rounded border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary">schedule</span> 2–3 Days
+            </span>
+</div>
+<p class="font-body-md text-body-md text-charcoal-dark mt-2.5">
+            Define early-stage alliances, co-development milestones, resource sharing, and non-binding intention frameworks without triggering unintended legal liabilities or premature exclusivity traps.
+          </p>
+<div class="mt-3.5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Scope: Term sheet audit + Execution copy</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold hover:underline" href="#intake">
+              Inquire Terms <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3: Service Agreements for Freelancers & Startups -->
+<div class="bg-surface-card border-2 border-secondary/30 rounded-lg p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-secondary text-on-secondary px-3 py-0.5 text-label-sm font-label-sm rounded-bl">
+            MOST REQUESTED
+          </div>
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<span class="inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary/10 text-secondary">
+                OPERATIONS &amp; IP VESTING
+              </span>
+<h3 class="font-headline-md text-headline-md text-primary">Service Agreements for Freelancers &amp; Startups</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-charcoal-dark mt-2.5">
+            Comprehensive contracts covering scope creep, milestone disbursements, GST compliance, non-solicitation, and critical intellectual property vesting so you retain complete ownership of work product.
+          </p>
+<div class="mt-3.5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant bg-surface-bg px-2 py-0.5 rounded border border-border-subtle">48h Delivery</span>
+<span class="text-body-sm text-secondary font-medium">Fixed Fee Pricing</span>
+</div>
+<a class="inline-flex items-center justify-center px-3.5 py-1.5 rounded-lg bg-primary-container text-white font-label-md text-label-md hover:bg-primary transition-colors active:scale-95" href="#intake">
+              Draft Agreement
+            </a>
+</div>
+</div>
+<!-- Service 4: Contract Clause Explainer -->
+<div class="bg-surface-card border border-border-subtle rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<span class="inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-accent-gold/20 text-[#92400E]">
+                PLAIN-LANGUAGE AUDIT
+              </span>
+<h3 class="font-headline-md text-headline-md text-primary">Contract Clause Explainer</h3>
+</div>
+<span class="inline-flex items-center text-label-sm font-label-sm text-on-surface-variant bg-surface-bg px-2 py-1 rounded border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary">schedule</span> 24 Hours
+            </span>
+</div>
+<p class="font-body-md text-body-md text-charcoal-dark mt-2.5">
+            Received a 30-page agreement you don't understand? We translate indemnity, uncapped liabilities, termination triggers, and non-compete clauses into plain, actionable risk warnings before you sign.
+          </p>
+<div class="mt-3.5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Red-flag markup &amp; executive audio memo</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold hover:underline" href="#intake">
+              Audit a Contract <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 5: Custom Commercial Contracts -->
+<div class="bg-surface-card border border-border-subtle rounded-lg p-space-md shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-3">
+<div class="space-y-1">
+<span class="inline-block px-2 py-0.5 rounded text-label-sm font-label-sm bg-secondary/10 text-secondary">
+                ENTERPRISE &amp; SAAS
+              </span>
+<h3 class="font-headline-md text-headline-md text-primary">Custom Commercial Contracts</h3>
+</div>
+<span class="inline-flex items-center text-label-sm font-label-sm text-on-surface-variant bg-surface-bg px-2 py-1 rounded border border-border-subtle">
+<span class="material-symbols-outlined text-[14px] mr-1 text-secondary">schedule</span> Bespoke
+            </span>
+</div>
+<p class="font-body-md text-body-md text-charcoal-dark mt-2.5">
+            Bespoke Master Services Agreements (MSA), SaaS End-User Terms, Software Vendor SLAs, and Shareholder Agreements configured to Indian corporate law &amp; regulatory frameworks.
+          </p>
+<div class="mt-3.5 pt-3 border-t border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+<span>Comprehensive drafting + Negotiation calls</span>
+</div>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary font-semibold hover:underline" href="#intake">
+              Custom Quote <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- INTAKE FORM: 'REQUEST A REVIEW' -->
+<section class="bg-surface-card border border-border-subtle rounded-xl p-space-lg shadow-sm" id="intake">
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">rate_review</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Request a Review</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Submit your draft or specify agreement scope for a quick assessment and fixed quotation from Advocate Amanat Raza.
+        </p>
+</div>
+<form class="mt-6 space-y-4" onsubmit="event.preventDefault(); alert('Request submitted under legal confidentiality protocol. Advocate Amanat Raza will reach out within 4 business hours.');">
+<!-- Service Type Selection -->
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5" for="service-type">
+            Service Required *
+          </label>
+<select class="w-full h-12 px-3 rounded-lg border border-border-subtle bg-surface-bg text-on-surface font-body-md focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="service-type" required="">
+<option value="">Select a service...</option>
+<option value="nda">NDA Drafting &amp; Review</option>
+<option value="mou">MoU Drafting &amp; Strategic Terms</option>
+<option value="service-agreement">Service Agreement (Freelancer / Startup)</option>
+<option value="explainer">Contract Clause Explainer / Red-flag Audit</option>
+<option value="commercial">Custom Commercial Contract / MSA</option>
+<option value="other">Other Legal Inquiry</option>
+</select>
+</div>
+<!-- Contact Name & Phone/WhatsApp -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5" for="client-name">
+              Your Name / Entity *
+            </label>
+<input class="w-full h-12 px-3 rounded-lg border border-border-subtle bg-surface-bg text-on-surface font-body-md placeholder-outline focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="client-name" placeholder="e.g., Arvind Sharma" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5" for="client-contact">
+              WhatsApp / Phone Number *
+            </label>
+<input class="w-full h-12 px-3 rounded-lg border border-border-subtle bg-surface-bg text-on-surface font-body-md placeholder-outline focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="client-contact" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+</div>
+<!-- Turnaround Speed Requirement -->
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5">
+            Turnaround Window *
+          </label>
+<div class="grid grid-cols-3 gap-2">
+<label class="flex flex-col items-center justify-center p-2.5 rounded-lg border border-border-subtle bg-surface-bg cursor-pointer hover:border-secondary transition-all">
+<input class="text-secondary focus:ring-secondary" name="turnaround" type="radio" value="urgent"/>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-semibold">24 Hours</span>
+<span class="text-[10px] text-on-surface-variant">Urgent</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2.5 rounded-lg border border-secondary bg-secondary/5 cursor-pointer">
+<input checked="" class="text-secondary focus:ring-secondary" name="turnaround" type="radio" value="standard"/>
+<span class="font-label-sm text-label-sm text-secondary mt-1 font-semibold">48 Hours</span>
+<span class="text-[10px] text-on-surface-variant">Standard</span>
+</label>
+<label class="flex flex-col items-center justify-center p-2.5 rounded-lg border border-border-subtle bg-surface-bg cursor-pointer hover:border-secondary transition-all">
+<input class="text-secondary focus:ring-secondary" name="turnaround" type="radio" value="relaxed"/>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-semibold">3–5 Days</span>
+<span class="text-[10px] text-on-surface-variant">Comprehensive</span>
+</label>
+</div>
+</div>
+<!-- Describe Contract Details / Scope -->
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5" for="contract-notes">
+            Describe Contract Scope or Problem *
+          </label>
+<textarea class="w-full p-3 rounded-lg border border-border-subtle bg-surface-bg text-on-surface font-body-md placeholder-outline focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" id="contract-notes" placeholder="Specify counterparty type, key deal terms, questions regarding clauses, or special jurisdictions needed..." required="" rows="3"></textarea>
+</div>
+<!-- Document Upload Simulation -->
+<div>
+<label class="block font-label-md text-label-md text-primary mb-1.5">
+            Upload Contract Draft (Optional)
+          </label>
+<div class="border-2 border-dashed border-border-subtle rounded-lg p-4 text-center bg-surface-bg hover:border-secondary transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-outline text-3xl">upload_file</span>
+<p class="font-body-sm text-body-sm text-primary mt-1">Tap to select PDF, DOCX or scanned agreement</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Maximum file size 25MB</p>
+<input class="hidden" id="file-upload" type="file"/>
+</div>
+</div>
+<!-- Confidentiality Assurance Notice -->
+<div class="flex items-start gap-3 p-3 rounded-lg bg-surface-container-high/60 border border-border-subtle">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">lock</span>
+<div class="text-body-sm text-charcoal-dark leading-snug">
+<strong class="font-semibold text-primary">Strict Advocate Confidentiality:</strong> All shared documents and inquiries are protected by statutory legal privilege under the Advocates Act, 1961. Information is never shared with third parties.
+          </div>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-primary-container transition-all flex items-center justify-center gap-2 active:scale-[0.99] shadow-sm" type="submit">
+<span>Submit for Review &amp; Quote</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</section>
+<!-- FREQUENTLY ASKED CONTRACT QUESTIONS -->
+<section class="space-y-3">
+<h2 class="font-headline-md text-headline-md text-primary">Contract Review FAQs</h2>
+<div class="space-y-2">
+<details class="bg-surface-card border border-border-subtle rounded-lg p-3 group">
+<summary class="font-headline-sm text-headline-sm text-primary flex items-center justify-between cursor-pointer list-none">
+<span>Can an NDA drafted for India protect international clients?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+            Yes. We structure governing law and dispute resolution clauses to explicitly define international jurisdiction or hybrid arbitration provisions (e.g., SIAC or Indian Arbitration Act) depending on counterparty territory.
+          </p>
+</details>
+<details class="bg-surface-card border border-border-subtle rounded-lg p-3 group">
+<summary class="font-headline-sm text-headline-sm text-primary flex items-center justify-between cursor-pointer list-none">
+<span>What is the standard payment structure for legal drafting?</span>
+<span class="material-symbols-outlined text-outline group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<p class="font-body-md text-body-md text-on-surface-variant pt-2">
+            All drafting assignments operate on clear, flat-fee transparent pricing agreed upon after your initial review request. No hidden hourly surprises.
+          </p>
+</details>
+</div>
+</section>
+</main>
+<!-- FOOTER (Shared Component) -->
+<footer class="w-full px-4 pt-10 pb-24 flex flex-col gap-6 bg-surface-container-lowest border-t border-border-subtle">
+<div class="max-w-3xl mx-auto w-full space-y-6">
+<!-- Brand & Summary -->
+<div class="space-y-2">
+<span class="font-headline-md text-headline-md font-bold text-primary">lexovant</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Law • Research • Ideas. Plain-language contract drafting, Indian intellectual property frameworks, and business protection.
+        </p>
+</div>
+<!-- Links Cluster -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Home</a>
+<a class="font-body-sm text-body-sm text-primary font-medium underline hover:text-secondary transition-colors duration-150" href="#">Contract Services</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Portfolio</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Case Simplified</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">About</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Contact</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Cookie Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Disclaimer</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Terms of Use</a>
+</div>
+<!-- Legal Disclaimer & Copyright -->
+<div class="pt-4 border-t border-border-subtle flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          © 2026 Lexovant. For general information only, not legal advice.
+        </p>
+<span class="font-label-sm text-label-sm text-outline">Advocate Amanat Raza</span>
+</div>
+</div>
+</footer>
+<!-- BOTTOM NAVIGATION BAR (Shared Component — 'Contracts' Tab Active) -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-1.5 pb-safe bg-surface-card shadow-[0_-2px_10px_rgba(11,31,51,0.06)] border-t border-border-subtle">
+<!-- Tab 1: Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 flex-1 hover:text-primary transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="text-label-sm font-label-sm mt-0.5">Home</span>
+</a>
+<!-- Tab 2: Guides -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 flex-1 hover:text-primary transition-colors duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[22px]">menu_book</span>
+<span class="text-label-sm font-label-sm mt-0.5">Guides</span>
+</a>
+<!-- Tab 3: Contracts (ACTIVE STATE) -->
+<a aria-current="page" class="flex flex-col items-center justify-center text-secondary font-semibold py-1 flex-1 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="text-label-sm font-label-sm mt-0.5">Contracts</span>
+</a>
+<!-- Tab 4: Book -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant py-1 flex-1 hover:text-primary transition-colors duration-150 active:scale-95" href="#intake">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+<span class="text-label-sm font-label-sm mt-0.5">Book</span>
+</a>
+</nav>
+</body></html>

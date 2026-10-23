@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lexovant | Clearer law. Stronger contracts. Smarter decisions.</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts: Manrope (Headlines) & Inter (Body) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "error-container": "#ffdad6",
+            "on-primary": "#ffffff",
+            "outline-variant": "#c4c6cd",
+            "on-primary-container": "#7587a0",
+            "surface-variant": "#e4e2e4",
+            "tertiary-fixed-dim": "#e7bf97",
+            "on-secondary-fixed": "#00201c",
+            "secondary-fixed-dim": "#4fdbc8",
+            "accent-gold": "#F4B860",
+            "tertiary-container": "#2e1901",
+            "surface-container-highest": "#e4e2e4",
+            "border-subtle": "#E2E8F0",
+            "on-surface": "#1b1c1d",
+            "on-tertiary-fixed": "#2b1700",
+            "on-tertiary-container": "#a27f5b",
+            "secondary-container": "#6df5e1",
+            "primary-fixed-dim": "#b5c8e3",
+            "primary-container": "#0b1f33",
+            "inverse-on-surface": "#f2f0f2",
+            "on-surface-variant": "#44474c",
+            "on-secondary-container": "#006f64",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#36485e",
+            "surface-card": "#FFFFFF",
+            "tertiary": "#090300",
+            "surface-container-high": "#e9e7e9",
+            "surface": "#fbf9fb",
+            "outline": "#74777d",
+            "surface-bg": "#F8FAFC",
+            "primary": "#00050e",
+            "inverse-surface": "#303032",
+            "background": "#fbf9fb",
+            "surface-container-lowest": "#ffffff",
+            "tertiary-fixed": "#ffdcbb",
+            "charcoal-dark": "#1E1E1E",
+            "surface-bright": "#fbf9fb",
+            "on-tertiary-fixed-variant": "#5d4123",
+            "on-error": "#ffffff",
+            "primary-fixed": "#d1e4ff",
+            "error": "#ba1a1a",
+            "inverse-primary": "#b5c8e3",
+            "secondary": "#006b5f",
+            "surface-dim": "#dbd9db",
+            "surface-container": "#efedef",
+            "on-background": "#1b1c1d",
+            "on-secondary-fixed-variant": "#005048",
+            "secondary-fixed": "#71f8e4",
+            "surface-container-low": "#f5f3f5",
+            "surface-tint": "#4e6077",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#081d30"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xl": "2rem",
+            "gutter": "1rem",
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-xl-mobile": ["Manrope"],
+            "headline-xl": ["Manrope"],
+            "headline-sm": ["Manrope"],
+            "body-sm": ["Inter"],
+            "label-md": ["Inter"],
+            "headline-lg": ["Manrope"],
+            "label-sm": ["Inter"],
+            "headline-md": ["Manrope"]
+          },
+          "fontSize": {
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-xl-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+            "headline-xl": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+            "headline-sm": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-bg text-on-surface antialiased selection:bg-secondary selection:text-on-secondary min-h-screen pb-20 md:pb-0">
+<!-- TopAppBar Component -->
+<header class="bg-surface-card dark:bg-primary docked full-width top-0 sticky z-40 shadow-sm border-b border-border-subtle dark:border-outline-variant">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<button aria-label="Navigation Menu" class="p-2 -ml-2 rounded-lg text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="menu">menu</span>
+</button>
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-on-primary lowercase" href="#">
+        lexovant
+      </a>
+<div class="flex items-center gap-1">
+<button aria-label="Search Legal Database" class="p-2 -mr-1 rounded-lg text-primary dark:text-inverse-primary hover:bg-surface-container transition-colors duration-150 active:scale-95" type="button">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+</button>
+</div>
+</div>
+</header>
+<main class="w-full">
+<!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-[#0B1F33] via-[#091A2B] to-[#0D364A] text-on-primary px-4 pt-8 pb-10 overflow-hidden">
+<!-- Ambient light effect -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-md mx-auto relative z-10 flex flex-col gap-4">
+<!-- Badge -->
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded bg-[#14B8A6]/15 border border-[#14B8A6]/30">
+<span class="font-label-sm text-label-sm text-secondary-fixed tracking-wider">LAW • RESEARCH • IDEAS</span>
+</div>
+<!-- Headline -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-primary font-bold tracking-tight">
+          Clearer law. Stronger contracts. Smarter decisions.
+        </h1>
+<!-- Subheadline -->
+<p class="font-body-md text-body-md text-surface-container-high leading-relaxed">
+          Lexovant makes legal information easier to understand and helps founders, freelancers and small businesses approach contracts with more confidence.
+        </p>
+<!-- Author Tagline -->
+<div class="p-3 rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm border border-surface-container-lowest/15">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-accent-gold mt-0.5 text-lg" data-icon="verified_user">verified_user</span>
+<p class="font-label-sm text-label-sm text-accent-gold leading-snug">
+              Created by Amanat Raza, Advocate | Legal Research • Contract Drafting • Intellectual Property
+            </p>
+</div>
+</div>
+<!-- CTA Cluster -->
+<div class="flex flex-col gap-2.5 pt-2">
+<a class="w-full h-12 flex items-center justify-center rounded-lg bg-secondary text-on-primary font-label-md text-label-md shadow-md active:scale-95 transition-transform duration-150 text-center" href="#contract-services">
+            Explore Contract Services
+          </a>
+<a class="w-full h-12 flex items-center justify-center rounded-lg border-2 border-surface-card/60 text-on-primary font-label-md text-label-md hover:bg-surface-card/10 active:scale-95 transition-transform duration-150 text-center" href="#latest-articles">
+            Read Legal Guides
+          </a>
+</div>
+<!-- Value Badges -->
+<div class="pt-3 border-t border-surface-container-lowest/15 flex flex-col gap-1.5 font-label-sm text-label-sm text-surface-container-high">
+<div class="flex items-center gap-2">
+<span class="text-secondary-fixed font-bold">✓</span>
+<span>Plain-language guides</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-secondary-fixed font-bold">✓</span>
+<span>India-focused</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-secondary-fixed font-bold">✓</span>
+<span>Contract checklists</span>
+</div>
+</div>
+<!-- Disclaimer Note -->
+<p class="font-body-sm text-body-sm text-outline-variant pt-1 text-[11px] leading-snug">
+          Practical information and drafting support. Website content is general information, not a substitute for advice on your specific matter.
+        </p>
+</div>
+</section>
+<!-- Search / Quick Finder Bar -->
+<section class="px-4 -mt-4 relative z-20 max-w-md mx-auto">
+<div class="bg-surface-card rounded-lg border border-border-subtle shadow-md p-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-outline ml-2 text-xl" data-icon="search">search</span>
+<input class="w-full bg-transparent border-0 focus:ring-0 font-body-sm text-body-sm text-charcoal-dark placeholder:text-outline p-1" placeholder="Search legal rights, clauses, BNSS, contracts..." type="text"/>
+</div>
+</section>
+<!-- Core Pillars Bento -->
+<section class="px-4 pt-8 pb-4 max-w-md mx-auto">
+<div class="flex flex-col gap-3">
+<!-- Pillar 01 -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-4 shadow-sm hover:shadow transition-shadow relative overflow-hidden">
+<div class="w-1.5 h-full absolute left-0 top-0 bg-[#14B8A6]"></div>
+<div class="flex items-center justify-between mb-2 pl-2">
+<span class="font-label-sm text-label-sm text-secondary tracking-widest font-bold">01 / LEARN</span>
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="school">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary pl-2 mb-1">
+            Understand your rights
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-2 mb-3 leading-relaxed">
+            Plain-language guides on Indian law, consumer issues, police procedures and everyday legal questions.
+          </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-secondary pl-2 hover:underline" href="#">
+<span>Explore legal guides</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Pillar 02 -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-4 shadow-sm hover:shadow transition-shadow relative overflow-hidden">
+<div class="w-1.5 h-full absolute left-0 top-0 bg-primary-container"></div>
+<div class="flex items-center justify-between mb-2 pl-2">
+<span class="font-label-sm text-label-sm text-primary-container tracking-widest font-bold">02 / PROTECT</span>
+<span class="material-symbols-outlined text-primary-container text-lg" data-icon="security">security</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary pl-2 mb-1">
+            Build stronger contracts
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-2 mb-3 leading-relaxed">
+            Learn what to check in NDAs, service agreements, MoUs and commercial contracts before you sign.
+          </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary-container pl-2 hover:underline" href="#">
+<span>Explore contract support</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Pillar 03 -->
+<div class="bg-surface-card rounded-lg border border-border-subtle p-4 shadow-sm hover:shadow transition-shadow relative overflow-hidden">
+<div class="w-1.5 h-full absolute left-0 top-0 bg-accent-gold"></div>
+<div class="flex items-center justify-between mb-2 pl-2">
+<span class="font-label-sm text-label-sm text-on-tertiary-container tracking-widest font-bold">03 / BUILD</span>
+<span class="material-symbols-outlined text-accent-gold text-lg" data-icon="handyman">handyman</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary pl-2 mb-1">
+            Practical tools for business
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant pl-2 mb-3 leading-relaxed">
+            We're developing checklists and simple legal-document workflows to make routine contract tasks easier to organise.
+          </p>
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-on-tertiary-container pl-2 hover:underline" href="#">
+<span>Suggest a tool or ask a question</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Contract Services Spotlight -->
+<section class="px-4 py-6 max-w-md mx-auto" id="contract-services">
+<div class="mb-3">
+<h2 class="font-headline-md text-headline-md text-primary font-bold">
+          Contract Services
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Explore drafting and review support for NDAs, MoUs, service agreements and intellectual property.
+        </p>
+</div>
+<div class="grid grid-cols-2 gap-2.5">
+<div class="p-3 bg-surface-card rounded-lg border border-border-subtle flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-2xl mb-2" data-icon="description">description</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-[14px]">NDA Drafting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Mutual &amp; unilateral disclosure protection</p>
+</div>
+</div>
+<div class="p-3 bg-surface-card rounded-lg border border-border-subtle flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-2xl mb-2" data-icon="handshake">handshake</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-[14px]">MoU Drafting</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Strategic framework &amp; partner terms</p>
+</div>
+</div>
+<div class="p-3 bg-surface-card rounded-lg border border-border-subtle flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-2xl mb-2" data-icon="work">work</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-[14px]">Service Agreements</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Freelancers, vendors &amp; client contracts</p>
+</div>
+</div>
+<div class="p-3 bg-surface-card rounded-lg border border-border-subtle flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-2xl mb-2" data-icon="gavel">gavel</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-primary text-[14px]">Clause Explainer</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[11px] leading-tight">Line-by-line review before signing</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Articles / Legal Guides -->
+<section class="px-4 py-6 max-w-md mx-auto" id="latest-articles">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary font-bold">
+            Latest Articles
+          </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Understand your options with step-by-step explainers.
+          </p>
+</div>
+<a class="font-label-sm text-label-sm text-secondary font-bold" href="#">VIEW ALL</a>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Article 1 -->
+<article class="bg-surface-card rounded-lg border border-border-subtle overflow-hidden shadow-sm flex flex-col">
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#14B8A6]/10 text-secondary font-label-sm text-label-sm">PROPERTY LAW</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">October 23, 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+<a class="hover:text-secondary transition-colors" href="#">
+                Registry Ho Gayi, Phir Bhi Zameen Par Kabza Nahi Mila? Ab Kya Karein?
+              </a>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Registered sale deed ke baad bhi zameen ka possession nahi mila? Understand practical legal steps, possible civil remedies and key property-record checks,…
+            </p>
+<div class="flex items-center justify-between pt-2 text-[11px] text-outline font-label-sm">
+<span>5 min read</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></span>
+</div>
+</div>
+</article>
+<!-- Article 2 -->
+<article class="bg-surface-card rounded-lg border border-border-subtle overflow-hidden shadow-sm flex flex-col">
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-accent-gold/20 text-[#92400E] font-label-sm text-label-sm">SUPREME COURT</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">October 23, 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+<a class="hover:text-secondary transition-colors" href="#">
+                Supreme Court on Bribe Allegations: When Is Prior Approval Under Section 17A Required?
+              </a>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              In Tejaram v. State of Rajasthan, the Supreme Court explained why Section 17A prior approval did not apply to an alleged bribe…
+            </p>
+<div class="flex items-center justify-between pt-2 text-[11px] text-outline font-label-sm">
+<span>4 min read</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></span>
+</div>
+</div>
+</article>
+<!-- Article 3 with Real Estate Land Image -->
+<article class="bg-surface-card rounded-lg border border-border-subtle overflow-hidden shadow-sm flex flex-col">
+<div class="w-full h-36 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A clean architectural photograph of rural Indian agricultural plot boundaries under morning sunlight, with signed land registry maps and a smartphone displaying digital land record certificates on a wooden surface in sharp focus with deep navy shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4j7Qi2eWltaxunzOgfmrJKPdhjhIduu7Xk4EGnoXR1ErD8h3Z0RWlMuAhLkWQ3KqT698xnMfO3DMF_4N4F8TShBBIYhGNWM_hvYt3DApOBhyoUOqY8YWh1k2_hxDVhZc6L4IBeOK1pg4tUc2WnkcBC98vdr73TDoXvNKwGaqQoyAEmoGZTIvqjr9SWPs7ZUTSLxW7K5oQVCvnevfkVNNwxJyRlhdQBGwXkr4T5E-S8BvxU3v2V-rl"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#14B8A6]/10 text-secondary font-label-sm text-label-sm">LAND RECORDS</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">October 22, 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+<a class="hover:text-secondary transition-colors" href="#">
+                Bihar Mein Zameen Kharidne Se Pehle Jamabandi, Mutation Aur Registry Kaise Check Karein?
+              </a>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Bihar mein zameen kharidne se pehle Jamabandi, mutation aur registry ka difference samjhein. Use this practical checklist to compare records and spot…
+            </p>
+<div class="flex items-center justify-between pt-2 text-[11px] text-outline font-label-sm">
+<span>6 min read</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></span>
+</div>
+</div>
+</article>
+<!-- Article 4 with Contract Inspection Image -->
+<article class="bg-surface-card rounded-lg border border-border-subtle overflow-hidden shadow-sm flex flex-col">
+<div class="w-full h-36 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up photograph of an Indian property purchase contract alongside gold brass house keys and title search legal registers arranged neatly on a modern warm mahogany office desk with daylight streaming in." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmgyW0IlK6HxePuoyT-YEZRQTRxfTkJ6T1H1f3WlqNii3x__vvle_1OEXqQ3Cl3Xw9i_J7laQwdvN0DnnwUz7-Va5tVH60sMoi4Vf44KzSSwn_s0YuxBaYzyWad7VkZLwgiUgaFcZw-9Yld7-cLrZzGAfVnQC1px3Sos7vjNH_G4EARMuGwPCTrawf3ERsafhyg7NfN8N5HJNjn3nOD6mfzeSYqfTZ-4h6VwO0C5Oav5GzuKB2T2jm"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#14B8A6]/10 text-secondary font-label-sm text-label-sm">PROPERTY CHECKLIST</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">October 22, 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+<a class="hover:text-secondary transition-colors" href="#">
+                Buying Property? Check These 7 Legal Essentials First
+              </a>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Planning to buy a plot, flat or house? Use this practical seven-point property document checklist, with important title, land-record and Bihar-specific checks…
+            </p>
+<div class="flex items-center justify-between pt-2 text-[11px] text-outline font-label-sm">
+<span>7 min read</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></span>
+</div>
+</div>
+</article>
+<!-- Article 5 with IP Law Focus -->
+<article class="bg-surface-card rounded-lg border border-border-subtle overflow-hidden shadow-sm flex flex-col">
+<div class="w-full h-36 relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Modern intellectual property branding presentation showing patent sketches and dark navy notebooks stamped with metallic gold foil emblem motifs, captured in a clean minimalist design studio with soft light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS7Og5uYfOONXZqYkyrToaQkJrEqN_f9nauIpS48cftsmyN9PULpVkEW32C1LdA2XFaAIM6bUm-V1VBXvvT83x3vLSrP8V5fWFW0jdT4pG4e7o72kjNy6Qj9r185Zm4rxA3G5ySJOdQGWXBwz7RSV_eVCSXyv5G2HeZZTCqz1hQzPUma9KMX7uHyzsdqA9vGkFofj5YLqOqRWjfPLz-x4q6cj3e32OEu1Y8VQsugpPq2B5uL-LY5O4"/>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-[#14B8A6]/10 text-secondary font-label-sm text-label-sm">INTELLECTUAL PROPERTY</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">October 21, 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+<a class="hover:text-secondary transition-colors" href="#">
+                You Can't Copyright an Idea. Here's What You Can Protect Instead
+              </a>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Everyone tells creators to "copyright their idea" before sharing it. Indian law doesn't work that way. Here is what the Copyright Act,…
+            </p>
+<div class="flex items-center justify-between pt-2 text-[11px] text-outline font-label-sm">
+<span>5 min read</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></span>
+</div>
+</div>
+</article>
+<!-- Article 6: Criminal Law BNSS -->
+<article class="bg-surface-card rounded-lg border border-border-subtle overflow-hidden shadow-sm flex flex-col">
+<div class="p-4 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-error-container text-error font-label-sm text-label-sm">BNSS 2024 / PROCEDURE</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">October 16, 2026</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary leading-snug">
+<a class="hover:text-secondary transition-colors" href="#">
+                How to File an FIR in India (Zero FIR and e-FIR): Step-by-Step Guide Under BNSS
+              </a>
+</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Police saying it is not their area? Learn how to file an FIR online or at any police station in India, how Zero FIR works, and what provisions apply under Bharatiya Nagarik Suraksha Sanhita.
+            </p>
+<div class="flex items-center justify-between pt-2 text-[11px] text-outline font-label-sm">
+<span>8 min read</span>
+<span class="text-secondary font-semibold flex items-center gap-0.5">Read Guide <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span></span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination Button -->
+<div class="mt-6 flex justify-center">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-border-subtle bg-surface-card text-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform duration-150" href="#">
+<span>Next Page</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Consultation / Contact Prompt Card -->
+<section class="px-4 py-6 max-w-md mx-auto">
+<div class="bg-gradient-to-br from-[#0B1F33] to-[#0A263B] text-on-primary rounded-xl p-6 shadow-md border border-surface-container-lowest/10 relative overflow-hidden">
+<div class="relative z-10 flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary-fixed text-3xl" data-icon="contact_support">contact_support</span>
+<h2 class="font-headline-lg text-headline-lg font-bold leading-tight">
+            Have a contract question or a topic in mind?
+          </h2>
+<p class="font-body-sm text-body-sm text-surface-container-high leading-relaxed">
+            Tell us what you would like to understand or which document you need help with. Please do not send sensitive or confidential documents before a suitable sharing process is agreed.
+          </p>
+<div class="flex flex-col gap-2 pt-2">
+<a class="w-full h-11 flex items-center justify-center rounded-lg bg-secondary text-on-primary font-label-md text-label-md active:scale-95 transition-transform" href="mailto:amanatraza22@gmail.com">
+              Contact Lexovant
+            </a>
+<a class="w-full h-11 flex items-center justify-center rounded-lg border border-surface-card/40 text-on-primary font-label-md text-label-md hover:bg-surface-card/10 active:scale-95 transition-transform" href="tel:+919199114077">
+              Call: +91 91991 14077
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter & Email Capture -->
+<section class="px-4 py-6 max-w-md mx-auto">
+<div class="bg-surface-card rounded-xl border border-border-subtle p-5 shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="mail">mail</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Get new legal guides by email</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Plain-language guides on contracts, rights and freelancing in India. No spam, unsubscribe anytime.
+        </p>
+<form class="flex flex-col gap-2 pt-1" onsubmit="event.preventDefault();">
+<input class="w-full h-11 rounded-lg border border-border-subtle bg-surface-bg px-3 font-body-sm text-body-sm text-primary focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Type your email…" type="email"/>
+<button class="w-full h-11 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md active:scale-95 transition-transform" type="submit">
+            Subscribe
+          </button>
+</form>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest dark:bg-primary border-t border-border-subtle dark:border-outline-variant w-full px-4 pt-10 pb-24 flex flex-col gap-6">
+<div class="max-w-md mx-auto w-full flex flex-col gap-6">
+<div>
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-on-primary lowercase" href="#">
+            lexovant
+          </a>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Skills | Rights | Ideas. Simple guides on freelancing, online skills and your legal rights in India.
+          </p>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-primary dark:text-on-primary">Explore</h4>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Contract Services</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Portfolio</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Case Simplified</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-primary dark:text-on-primary">Policies</h4>
+<div class="flex flex-col gap-1.5 font-body-sm text-body-sm">
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Cookie Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Disclaimer</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-150" href="#">Terms of Use</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-2 border-t border-border-subtle">
+<h4 class="font-label-md text-label-md text-primary dark:text-on-primary">Connect</h4>
+<div class="flex flex-col gap-1 font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-secondary" href="mailto:amanatraza22@gmail.com">amanatraza22@gmail.com</a>
+<a class="hover:text-secondary" href="tel:+919199114077">+91 91991 14077</a>
+<div class="flex gap-4 pt-1">
+<a class="text-secondary font-semibold" href="https://www.linkedin.com/in/amanat-raza" rel="noopener" target="_blank">LinkedIn</a>
+<a class="text-secondary font-semibold" href="https://www.instagram.com/lawsimplified_official" rel="noopener" target="_blank">Instagram</a>
+</div>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px] pt-4 border-t border-border-subtle">
+          © 2026 Lexovant. For general information only, not legal advice.
+        </p>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar Component (Mobile Destination Anchored) -->
+<nav aria-label="Bottom Navigation" class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-2 py-1.5 pb-safe bg-surface-card dark:bg-primary-container shadow-[0_-2px_10px_rgba(11,31,51,0.06)]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed font-semibold py-1 active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</a>
+<!-- Guides -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 active:scale-95 transition-transform duration-150 hover:text-primary" href="#latest-articles">
+<span class="material-symbols-outlined text-2xl" data-icon="menu_book">menu_book</span>
+<span class="font-label-sm text-label-sm mt-0.5">Guides</span>
+</a>
+<!-- Contracts -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 active:scale-95 transition-transform duration-150 hover:text-primary" href="#contract-services">
+<span class="material-symbols-outlined text-2xl" data-icon="gavel">gavel</span>
+<span class="font-label-sm text-label-sm mt-0.5">Contracts</span>
+</a>
+<!-- Book Consultation -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant py-1 active:scale-95 transition-transform duration-150 hover:text-primary" href="mailto:amanatraza22@gmail.com">
+<span class="material-symbols-outlined text-2xl" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-sm text-label-sm mt-0.5">Book</span>
+</a>
+</nav>
+</body></html>
